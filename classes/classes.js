@@ -5,13 +5,6 @@ class Clock {
         this.template = template;
         this.timer = null; 
       }
-    
-        //define stop method of the clock
-        stop() {
-    
-          clearInterval(this.timer);
-     
-        };
      
         render() {
     
@@ -46,17 +39,23 @@ class Clock {
           console.log(output);
     
        }
-           //define START method of Clock object
+           //define START method of the template
            start () {
      
             this.render();
        
             this.timer = setInterval(() =>
              this.render(), 1000)};
-       
-          };
+
+        //define stop method of the template
+        stop() {
     
-      //create new Clock object and use the START method()
+          clearInterval(this.timer);
+     
+        }
+      };
+    
+      //create new Clock object with template constructor called
       let clock = new Clock({template: 'h:m:s'});
     
      clock.start();

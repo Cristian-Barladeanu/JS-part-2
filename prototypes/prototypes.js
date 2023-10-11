@@ -3,7 +3,7 @@
 // For instance, pockets.pen should be 3 (found in table), and bed.glasses should be 1 (found in head).
 
 let head = {
-    glasses: 1
+    glasses: 1,
 };
 
 let table = {
@@ -23,7 +23,7 @@ let pockets = {
 };
 
 
-console.log(table.sheet);
+console.log(pockets.money);
 
 
 // 2.Answer the question: is it faster to get glasses as pockets.glasses or head.glasses? Benchmark if needed.
