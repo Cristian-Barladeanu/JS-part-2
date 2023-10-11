@@ -5,6 +5,7 @@ class Clock {
         this.template = template;
         this.timer = null; 
       }
+
      
         render() {
     
@@ -51,7 +52,7 @@ class Clock {
         stop() {
     
           clearInterval(this.timer);
-     
+  
         }
       };
     
