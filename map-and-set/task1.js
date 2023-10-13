@@ -2,33 +2,81 @@
 // Let arr be an array.
 // Create a function unique(arr) that should return an array with unique items of arr.
 
-let values = ["Hare", "Krishna", "Hare", "Krishna",
+let values = [
+  "Hare",
+  "Krishna",
+  "Hare",
+  "Krishna",
 
-    "Krishna", "Krishna", "Hare", "Hare", ":-O"];
+  "Krishna",
+  "Krishna",
+  "Hare",
+  "Hare",
+  ":-O",
+];
 
+const returnUnique = (arr) => {
+  const uniqueArray = new Array();
 
-const unique = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    let found = false;
 
+    for (let j = 0; j < uniqueArray.length; j++) {
+      if (arr[i] === uniqueArray[j]) {
+        found = true;
 
-    const tempSet = new Set();
+        break;
+      }
+    }
 
+    if (!found) {
+      uniqueArray.push(arr[i]);
+    }
+  }
 
-    for (const temp of arr) {
-        tempSet.add(temp);
-    };
+  console.log(uniqueArray);
 
-    const uniqueArray = new Array();
+  return uniqueArray;
+};
 
-    uniqueArray.push(...tempSet);
+returnUnique(values);
 
-    console.log(uniqueArray);
+// const returnUnique = (arr) => {
 
-    return uniqueArray;
+//     const uniqueArray = new Array();
 
-}
+//     for (let i=0; i<arr.length; i++) {
+//         if (arr[i] != arr[i+1]){
+//             uniqueArray.push(arr[i]);
+//         } else if (arr[i] === arr[i+1]){
+//             uniqueArray.shift();
+//         }
+//     }
 
-unique(values); // Hare, Krishna, :-O
+//     console.log(uniqueArray);
 
+//     return uniqueArray;
+
+// }
+
+// returnUnique(values);
+
+//########################################
+
+// const tempSet = new Set();
+
+// // for (const temp of arr) {
+// //     tempSet.add(temp);
+// // };
+
+// // const uniqueArray = new Array();
+
+// // uniqueArray.push(...tempSet);
+
+// // console.log(uniqueArray);
+
+// // return uniqueArray;
+//unique(values); // Hare, Krishna, :-O
 
 // P.S. Here strings are used, but can be values of any type.
 

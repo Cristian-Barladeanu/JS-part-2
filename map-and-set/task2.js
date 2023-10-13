@@ -5,31 +5,38 @@
 // keys.push("more");
 // Why? How can we fix the code to make keys.push work?
 
-const getKeys = (map) => { 
-
-const arrayOfKeys = new Array();
-
-for (const temp of map.keys()) { 
-    arrayOfKeys.push(temp);
-}
-
-return arrayOfKeys;
-
-//console.log(arrayOfKeys);
-
-}
-
-
 
 let map = new Map();
 
 map.set("name", "John");
 
-
-let keys = new Array();
-
-keys = getKeys(map);
+let keys = new Array(map.keys());
 
 keys.push("more");
 
 console.log(keys);
+
+
+// const getKeys = (map) => {
+
+//     let arrayOfKeys = new Array();
+
+//     arrayOfKeys = map.keys();
+
+//     // for (const temp of map.keys()) {
+//     //     arrayOfKeys.push(temp);
+//     // }
+
+//     return arrayOfKeys;
+
+//     //console.log(arrayOfKeys);
+
+// }
+
+
+
+
+
+
+
+
