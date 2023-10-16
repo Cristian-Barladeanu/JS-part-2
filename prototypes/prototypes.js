@@ -23,7 +23,7 @@ let pockets = {
 };
 
 
-console.log(pockets.money);
+console.log(bed.pen);
 
 
 // 2.Answer the question: is it faster to get glasses as pockets.glasses or head.glasses? Benchmark if needed.

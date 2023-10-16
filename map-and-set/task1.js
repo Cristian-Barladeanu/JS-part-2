@@ -1,6 +1,8 @@
 // Task 1.
 // Let arr be an array.
 // Create a function unique(arr) that should return an array with unique items of arr.
+// P.S. Here strings are used, but can be values of any type.
+// P.P.S. Use Set to store unique values.
 
 let values = [
   "Hare",
@@ -16,6 +18,7 @@ let values = [
 ];
 
 const returnUnique = (arr) => {
+  
   const uniqueArray = new Array();
 
   for (let i = 0; i < arr.length; i++) {
@@ -41,26 +44,6 @@ const returnUnique = (arr) => {
 
 returnUnique(values);
 
-// const returnUnique = (arr) => {
-
-//     const uniqueArray = new Array();
-
-//     for (let i=0; i<arr.length; i++) {
-//         if (arr[i] != arr[i+1]){
-//             uniqueArray.push(arr[i]);
-//         } else if (arr[i] === arr[i+1]){
-//             uniqueArray.shift();
-//         }
-//     }
-
-//     console.log(uniqueArray);
-
-//     return uniqueArray;
-
-// }
-
-// returnUnique(values);
-
 //########################################
 
 // const tempSet = new Set();
@@ -77,7 +60,3 @@ returnUnique(values);
 
 // // return uniqueArray;
 //unique(values); // Hare, Krishna, :-O
-
-// P.S. Here strings are used, but can be values of any type.
-
-// P.P.S. Use Set to store unique values.

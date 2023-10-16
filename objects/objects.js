@@ -43,17 +43,18 @@ const sumSalaries = (obj) => {
     let temp = 0;
 
     for (const a of salaries) { 
+
+        if (salaries.length === 0) { 
+                return 0;
+        } else {
         temp += a;
     }
+}
 
     return temp;
 
-    // for (const temp of salaries) { 
-
-    //     let ;
-    // }
-
 }
+
 
 console.log(sumSalaries(salaries)); // 650
 

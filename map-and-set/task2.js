@@ -10,7 +10,7 @@ let map = new Map();
 
 map.set("name", "John");
 
-let keys = new Array(map.keys());
+let keys = new Array(...map.keys());
 
 keys.push("more");
 
