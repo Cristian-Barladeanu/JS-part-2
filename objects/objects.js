@@ -3,21 +3,18 @@
 // console.log( count(user) );
 
 let user = {
+  name: "John",
 
-    name: 'John',
-
-    age: 30
+  age: 30,
 };
 
 const count = (obj) => {
+  const keys = Object.keys(obj);
 
-    const keys = Object.keys(obj);
-
-    return keys.length;
-}
+  return keys.length;
+};
 
 console.log(count(user));
-
 
 // Task 2.
 // There is a salaries object with arbitrary number of salaries.
@@ -27,36 +24,27 @@ console.log(count(user));
 // If salaries is empty, then the result must be 0.
 
 let salaries = {
+  John: 100,
 
-    "John": 100,
+  Pete: 300,
 
-    "Pete": 300,
-
-    "Mary": 250
-
+  Mary: 250,
 };
 
 const sumSalaries = (obj) => {
+  const salaries = Object.values(obj);
 
-    const salaries = Object.values(obj);
+  if (salaries.length === 0) {
+    return 0;
+  }
 
-    let temp = 0;
+  let temp = 0;
 
-    for (const a of salaries) { 
+  for (const a of salaries) {
+    temp += a;
+  }
 
-        if (salaries.length === 0) { 
-                return 0;
-        } else {
-        temp += a;
-    }
-}
-
-    return temp;
-
-}
-
+  return temp;
+};
 
 console.log(sumSalaries(salaries)); // 650
-
-
-
